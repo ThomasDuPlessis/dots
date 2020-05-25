@@ -1,0 +1,2 @@
+#!/bin/sh
+wmctrl -a $(wmctrl -l | fzf  | awk '{print $2}')

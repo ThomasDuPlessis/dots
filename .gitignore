@@ -1,0 +1,19 @@
+*
+
+!.profile
+!.xinitrc
+!.bashrc
+!.fzf.bash
+!.xmodmap
+!.mbsyncrc
+!.config/kak/kakrc
+!.config/kak-lsp/
+!.config/openbox/*
+!src/repos
+
+# bin
+!.local/bin/plan9-resize
+!.local/bin/winfocus
+
+
+!.gitignore

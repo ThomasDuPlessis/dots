@@ -85,6 +85,18 @@
   </item>
 </menu>
 
+<menu id="wm" label="wm">
+  <item label="resize">
+    <action name="Execute">
+      <command>plan9-resize</command>
+    </action>
+  </item>
+  <item label="focus">
+    <action name="Execute"><command>st -e winfocus</command></action>
+  </item>
+</menu>
+
+
 <menu id="apps-net-menu" label="Internet">
   <item label="Firefox">
     <action name="Execute">
@@ -348,6 +360,8 @@
 </menu>
 
 <menu id="root-menu" label="Openbox 3">
+  <separator label="wm"/>
+  <menu id="wm"/>
   <separator label="Applications" />
   <menu id="apps-accessories-menu"/>
   <menu id="apps-editors-menu"/>
