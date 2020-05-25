@@ -1,0 +1,16 @@
+eval %sh{kak-lsp --kakoune -s $kak_session}
+hook global WinSetOption filetype=(rust|python|go|javascript|typescript|c|cpp) %{
+        lsp-enable-window
+}
+
+source "~/src/fzf.kak/rc/fzf.kak" # loading base fzf module
+source "~/src/fzf.kak/rc/modules/fzf-file.kak"   # fzf file chooser
+source "~/src/fzf.kak/rc/modules/fzf-buffer.kak" # switching buffers with fzf
+source "~/src/fzf.kak/rc/modules/fzf-search.kak" # search within file contents
+source "~/src/fzf.kak/rc/modules/fzf-cd.kak"     # change server's working directory
+source "~/src/fzf.kak/rc/modules/fzf-ctags.kak"  # search f
+source "~/src/fzf.kak/rc/modules/VCS/fzf-bzr.kak" # GNU Bazaar support
+source "~/src/fzf.kak/rc/modules/VCS/fzf-git.kak" # Git support module
+source "~/src/fzf.kak/rc/modules/VCS/fzf-hg.kak"  # Mercurial VCS
+source "~/src/fzf.kak/rc/modules/VCS/fzf-svn.kak"
+
