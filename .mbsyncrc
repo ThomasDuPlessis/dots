@@ -1,0 +1,27 @@
+IMAPStore tpd-remote
+Host imap.gmail.com
+Port  993
+User thomas.p.duplessis@gmail.com
+PassCmd "pass mutt-wizard-tpd"
+AuthMechs LOGIN
+SSLType IMAPS
+AuthMech LOGIN
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore tpd-local
+Subfolders Verbatim
+Path ~/.local/share/mail/tpd/
+Inbox ~/.local/share/mail/tpd/INBOX
+Flatten .
+
+Channel tpd
+Expunge Both
+Master :tpd-remote:
+Slave :tpd-local:
+Patterns * !"[Gmail]/All Mail"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
