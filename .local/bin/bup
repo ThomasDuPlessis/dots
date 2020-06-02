@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if mountpoint /mnt/passportusb; then
+    rsync -P -r ~/ /mnt/passportusb/home
+fi
+
+if mountpoint /mnt/blackboxusb; then
+    rsync -P -r ~/ /mnt/blackboxusb/home
+fi
