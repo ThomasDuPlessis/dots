@@ -1,0 +1,5 @@
+#!/bin/sh
+
+while inotifywait --exclude .swp -e modify -r .; do 
+	$@;
+done;
