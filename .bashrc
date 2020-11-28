@@ -6,4 +6,4 @@ PS1='\w → '
 
 export HISTSIZE=64000
 
-dlv
+# dlv
